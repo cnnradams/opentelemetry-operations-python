@@ -283,7 +283,6 @@ class CloudMonitoringMetricsExporter(MetricsExporter):
         for record in metric_records:
             instrument = record.instrument
             metric_descriptor = self._get_metric_descriptor(record)
-            print(metric_descriptor)
             if not metric_descriptor:
                 continue
             series = TimeSeries(
